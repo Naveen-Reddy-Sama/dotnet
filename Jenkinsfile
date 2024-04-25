@@ -50,6 +50,7 @@ pipeline {
                   aws eks update-kubeconfig --region ap-south-1 --name dotnet-cluster
                   cat deployment.yml
                   kubectl apply -f  deployment-new.yml
+		  kubectl apply -f service.yml
                   kubectl get pods 
                   '''
 
